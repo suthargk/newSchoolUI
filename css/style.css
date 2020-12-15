@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-light: #6e01f2;
+  --color-default: #7510f7;
+  --color-dark: #5f01d0;
+  --color-darker: #5e07cd;
+  --color-darkest: #48019d;
+
+  --color-1: #16cbe1;
+  --color-2: #5fc4e7;
+  --color-3: #9966ff;
+  --color-4: #002c59;
+  --color-5: #1959e6;
+}
+.color-1 {
+  background-color: var(--color-1);
+}
+.color-2 {
+  background-color: var(--color-2);
+}
+.color-3 {
+  background-color: var(--color-3);
+}
+.color-4 {
+  background-color: var(--color-4);
+}
+.color-5 {
+  background-color: var(--color-5);
+}
+
+.bg-light {
+  background-color: var(--color-light);
+}
+.text-light {
+  color: var(--color-light);
+}
+.text-default {
+  color: var(--color-default);
+}
+.text-dark {
+  color: var(--color-dark);
+}
+.text-darker {
+  color: var(--color-darker);
+}
+.bg-default {
+  background-color: var(--color-default);
+}
+.bg-dark {
+  background-color: var(--color-dark);
+}
+
+.header {
+  height: 90vh;
+  transition: all 0.4s;
+}
+
+.mobile-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 100px;
+  z-index: 997;
+  background-color: var(--color-default);
+}
+
+.hamburger {
+  display: inline-block;
+  position: relative;
+  width: 60%;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.hamburger::before,
+.hamburger::after {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.hamburger::before {
+  top: -0.4rem;
+}
+
+.hamburger::after {
+  top: 0.4rem;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: all 0.4s;
+  width: 84%;
+  height: 100vh;
+  z-index: 999;
+  background-color: var(--color-light);
+}
+.mobile-toggle-checkbox:checked ~ .navigation {
+  left: 0;
+}
+.mobile-toggle-checkbox:checked ~ .backdrop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 998;
+}
+
+.transparent {
+  background-color: #1e90ff;
+}
+
+.fly-man img {
+  position: absolute;
+  bottom: -3rem;
+  right: 0;
+}
+
+.cycle-man {
+  position: absolute;
+  top: -3rem;
+  left: -2rem;
+}
+
+.dots img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.color-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100%;
+}
+
+.heading-secondary {
+  color: var(--color-default);
+}
+
+.notice-box {
+  /* border: 1px solid var(--color-dark);
+  border-radius: 10px; */
+}
